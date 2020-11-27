@@ -7,4 +7,6 @@ RUN curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/so
 RUN apt-get update
 RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
 
+COPY requirements.txt
+
 RUN pip install -r requirements.txt
